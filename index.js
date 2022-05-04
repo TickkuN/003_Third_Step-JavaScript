@@ -21,9 +21,16 @@ for (let i = 0; i < numberOfDreamButtons; i++){
 
 document.addEventListener("keypress", function(event) {
 
-    makeSound(event.key);
+    const canPressKeys = ["w", "a", "s", "d", "j", "k", "l"];
+
+    if (canPressKeys.includes(event.key)){
+
+        makeSound(event.key);
     
-    buttonAnimation(event.key);
+        buttonAnimation(event.key);
+
+    }
+
 });
 
 function makeSound(key) {
